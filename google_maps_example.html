@@ -1,0 +1,172 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="shortcut icon" href="favicon.ico.ico" type="image/x-icon" />
+<title>MY IMPRINT</title>
+<style type="text/css">
+<!--
+.style7 {font-family: "Century Gothic"}
+.style9 {font-size: 20px}
+.style11 {font-family: "Century Gothic"; font-weight: bold;}
+.style16 {font-size: 20px; font-family: "Century Gothic"; }
+.style18 {font-family: "Century Gothic"; font-size: 18px; }
+-->
+</style>
+</head>
+</head>
+<body>
+
+<div style="width:100%;">
+<div style="width:90%; margin:0 auto;"; postition:relative;">
+
+<table width="1478" border="0" align="left" cellpadding="2" cellspacing="2">
+  <tr>
+    <td width="95"><div align="right"><img src="Images/banner sice 2.png" width="93" height="82" /></div></td>
+    <td width="337"><img src="logos/HH.png" width="333" height="95" /></td>
+    <td width="1026"><img src="Images/BANNER5SLICE.jpg" width="967" height="76" /></td>
+  </tr>
+</table>
+<div style="clear:both;"></div>
+<br/>
+<table style="margin-left:95px;" border="0" align="center" cellpadding="0" cellspacing="0">
+
+<tr>
+<td width="325" style="padding-right: 4%;"><span class="style9 style11"><strong>Giovanni Battista Querques</strong>, </span><span class="style16">Store</span>  
+         
+      <span class="style7">
+      <span class="style18">
+      1000-5      </span></span>    <span class="style18"></span></span></td></style>
+<script>
+function myFunction() {
+	window.print();
+}
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyAZaahJJB1Chzkm9cNSWc3ZqrerMvKCWAE"></script>
+<script>
+var geocoder; 
+var mapCenter;
+function initialize(id) {
+  geocoder = new google.maps.Geocoder();
+  
+  if (mapCenter == undefined){
+  	var latlng = new google.maps.LatLng(-34.397, 150.644);
+  } else {
+  	latlng = mapCenter;
+  }
+  var myOptions = {
+    zoom: 13,
+    center: latlng,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  }
+  map = new google.maps.Map(document.getElementById(id), myOptions);
+  return map;
+}
+
+
+function codeAddress(postalCode, map) {
+	if (mapCenter == undefined) {
+		geocoder.geocode( { 'address': postalCode}, function(results, status) {
+		  if (status == google.maps.GeocoderStatus.OK) {
+			
+			map.setCenter(results[0].geometry.location);
+			mapCenter = results[0].geometry.location;
+			console.log(mapCenter)
+			var marker = new google.maps.Marker({
+				map: map,
+				position: results[0].geometry.location
+			});
+		  } else {
+			console.log("Error geocoding");
+		  }	  
+		});
+	} else {
+		map.setCenter(mapCenter);
+		console.log(mapCenter);
+		var marker = new google.maps.Marker({
+				map: map,
+				position: mapCenter
+		});
+	}
+}
+
+function changeVisibleImprint(id, map){
+	map.setCenter(mapCenter);
+	google.maps.event.trigger(map, 'resize');
+	var imprint = document.getElementById(id);
+	currentVisibleImprint.style.display = 'none';
+	imprint.style.display = 'table-row';
+	currentVisibleImprint = imprint;
+	map.setCenter(mapCenter);
+	google.maps.event.trigger(map, 'resize');
+}
+</script>
+</head>
+
+<body>
+<div class="container row col-md-12 print_pages align="left""> 
+<div style="width:100%;">
+
+      <td style="border:3px solid black;" width="295" ><div class="box"> 
+        <div align="center" class="style18">My <strong>IMPRINT </strong>Report</div>
+      </div></td>
+</tr>
+</table>
+<br/>
+<div style="width: 75vw; margin: 0 auto; position: relative;">	<a href="home.php" style="float:left; margin: 0; padding:0;">
+      <button style="border:0; background:transparent; float:left; margin: 0; padding: 0; margin-left: -9px;"><img src="buttons/Return.png"/></button>
+	</a>
+</div>
+<div style="clear:both;"></div>
+<br/>
+<div style="clear:both"></div>
+<div style="width: 75vw; position: relative; margin: 0 auto; padding:0; height: auto; overflow: auto;">
+<a style="border: 1px solid black; padding: 10px; float:right;" onclick="changeVisibleImprint('imprint_3', map_3); changeVisibleImprint('imprint_3', map_3);">Imprint 4</a><a style="border: 1px solid black; padding: 10px; float:right;" onclick="changeVisibleImprint('imprint_2', map_2); changeVisibleImprint('imprint_2', map_2);">Imprint 3</a><a style="border: 1px solid black; padding: 10px; float:right;" onclick="changeVisibleImprint('imprint_1', map_1); changeVisibleImprint('imprint_1', map_1);">Imprint 2</a><a style="border: 1px solid black; padding: 10px; float:right;" onclick="changeVisibleImprint('imprint_0', map_0); changeVisibleImprint('imprint_0', map_0);">Imprint 1</a></div>
+<div style="width: 75vw; position: relative; margin: 0 auto; border: 1px solid black; padding-top: 50px; padding-bottom: 50px;">
+<table style="border-collapse: collapse; border: none; position: relative; width:95%; margin: 0 auto;" cellpadding="2" cellspacing="2">
+          			<tr>
+            		<td width="642"></td>
+            		<td width="191" style="border-left:none; border-right: 1px solid black;"></td>
+          		</tr>
+		  
+		  <tr id="imprint_0" style="width:100%; display:table-row;"><td><div><div id="map_0" style="postition:relative; width:50%; min-height: 400px; float:left"></div><script>
+						var map_0 = initialize("map_0");
+						codeAddress("K9J2A2",  map_0);
+						map_0.setCenter(mapCenter);
+						var marker = new google.maps.Marker({
+							map: map_0,
+							position: results[0].geometry.location
+						});
+					</script><table style="width:50%; float:left;"><tr><td>1000-5</td></tr><tr><td>Merrett Home Hardware Building Centre.</td></tr><tr><td>1460 Lansdownk Street W.,</td></tr><tr><td>PO Box 124</td></tr><tr><td>Peterborough</td></tr><tr><td>K9J2A2</td></tr><tr><td>ON</td></tr><tr><td>Giovanni Battista Querques</td></tr><tr><td>888-888-8888</td></tr><tr><td>jquerques@market-focus.com</td></tr><tr><td>Giovanni Battista Querques</td></tr><tr><td>www.homehardware.ca</td></tr><tr><td>Mon. 9:00 am - 6:00pm, Tue - Fri  8:30 am - 8:00 pm, Sat. 9:00 Am - 11:00Pm, Sun. Closed</td></tr><tr><td><img style="float:left;" src="images/facebook.jpg"/><img style="float:left;" src="images/rental.jpg"/><img style="float:left;" src="images/delivery.jpg"/></td></tr></table></div><tr id="imprint_1" style="width:100%; display:none"><td><div style="position: relative;width:100%;"><div id="map_1" style="postition:relative; width:50%; min-height: 400px; float:left"></div><script>
+						var map_1 = initialize("map_1");
+						codeAddress("K9J2A2",  map_1);
+						map_1.setCenter(mapCenter);
+						var marker = new google.maps.Marker({
+							map: map_1,
+							position: results[0].geometry.location
+						});
+					</script><table style="width:50%; float:left;"><tr><td>1000-5</td></tr><tr><td>Merrett Home Hardware Building Centre.</td></tr><tr><td>Peterborough</td></tr><tr><td>K9J2A2</td></tr><tr><td>1-800-888-0000</td></tr><tr><td><img style="float:left;" src="images/facebook.jpg"/><img style="float:left;" src="images/rental.jpg"/><img style="float:left;" src="images/delivery.jpg"/></td></tr></table></div><tr id="imprint_2" style="width:100%; display:none"><td><div style="position: relative;width:100%;"><div id="map_2" style="postition:relative; width:50%; min-height: 400px; float:left"></div><script>
+						var map_2 = initialize("map_2");
+						codeAddress("K9J2A2",  map_2);
+						map_2.setCenter(mapCenter);
+						var marker = new google.maps.Marker({
+							map: map_2,
+							position: results[0].geometry.location
+						});
+					</script><table style="width:50%; float:left;"><tr><td>1000-5</td></tr><tr><td>Merrett Home Hardware Building Centre.</td></tr><tr><td>B</td></tr><tr><td>Peterborough</td></tr><tr><td>K9J2A2</td></tr><tr><td>ON</td></tr><tr><td>1-800-888-0000</td></tr><tr><td><img style="float:left;" src="images/facebook.jpg"/><img style="float:left;" src="images/rental.jpg"/><img style="float:left;" src="images/delivery.jpg"/></td></tr></table></div><tr id="imprint_3" style="width:100%; display:none"><td><div style="position: relative;width:100%;"><div id="map_3" style="postition:relative; width:50%; min-height: 400px; float:left"></div><script>
+						var map_3 = initialize("map_3");
+						codeAddress("K9J2A2",  map_3);
+						map_3.setCenter(mapCenter);
+						var marker = new google.maps.Marker({
+							map: map_3,
+							position: results[0].geometry.location
+						});
+					</script><table style="width:50%; float:left;"><tr><td>1000-5</td></tr><tr><td>Merrett Home Hardware Building Centre.</td></tr><tr><td>B</td></tr><tr><td>1460 Lansdownk Street W.,</td></tr><tr><td>K9J2A2</td></tr><tr><td>jquerques@market-focus.com</td></tr><tr><td><img style="float:left;" src="images/facebook.jpg"/><img style="float:left;" src="images/rental.jpg"/><img style="float:left;" src="images/delivery.jpg"/></td></tr></table></div>        </table>
+		</div>
+		<script>var currentVisibleImprint = document.getElementById('imprint_0')</script>;
+</body>
+</html>
